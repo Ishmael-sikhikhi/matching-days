@@ -23,12 +23,13 @@ describe('Matching days', ()=>{
         it('It should return red if days are not of the same week day',()=>{
             let matchingDays_ = matchingDays()
             matchingDays_.setDays('2019-09-18','2021-07-12')
-            assert.equal('red',matchingDays_.matchTwoDay())
+            assert.equal('yellow',matchingDays_.matchTwoDay())
         })
         it('It should return red if days are not of the same week day',()=>{
             let matchingDays_ = matchingDays()
             matchingDays_.setDays('2021-09-18','2021-07-12')
-            assert.equal('red',matchingDays_.matchTwoDay())
+            assert.deepEqual('Monday',matchingDays_.notMatch())
+            assert.equal('yellow',matchingDays_.matchTwoDay())
         })
     })
 })

@@ -1,43 +1,45 @@
-function matchingDays(){
+function matchingDays() {
     var dayOne = ''
     var dayTwo = ''
-    function setDays(day1, day2){
+    var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    function setDays(day1, day2) {
         dayOne = new Date(day1);
         dayTwo = new Date(day2);
     }
-    function getDayOne(){
-        console.log(dayOne.getDay())
-        return dayOne.getDay()
+    function getDayOne() {
+
+        return Number(dayOne.getDay())
     }
-    function getDayTwo(){
-        console.log(dayTwo.getDay())
-        return dayTwo.getDay()
+    function getDayTwo() {
+        return Number(dayTwo.getDay())
     }
-    function matchTwoDay(){
-        if(getDayOne() === getDayTwo()){
+    function matchTwoDay() {
+        if (getDayOne() === getDayTwo()) {
             return "green"
         }
-        return "red"
+        else if (getDayOne() !== getDayTwo()){
+            if (getDayOne()){
+                return 'yellow'
+            }
+            if (getDayTwo()){
+                return 'red'
+            }
+        }
+    }
+    function weekDays(){
+        return week
+    }
+    function notMatch() {
+        console.log(week[getDayOne()])
+        return week[getDayOne(), getDayTwo()]
 
     }
-    return{
+    return {
         setDays,
         getDayOne,
         getDayTwo,
-        matchTwoDay
+        matchTwoDay,
+        notMatch,
+        weekDays
     }
 }
-
-// function sameWeekday(date1,date2){
-  
-//     //console.log(date2);
-//         var myDate1 = new Date(date1);
-//         var myDate2 =new Date(date2);
-//       console.log(myDate1);
-      
-    
-//     if(myDate1.getDay() == myDate2.getDay()){
-//          return true;
-//       }
-//     return false
-//   }

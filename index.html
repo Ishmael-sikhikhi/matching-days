@@ -3,33 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/IMG_20210414_100047.ico">
-    <title>Matching days</title>
+    <tracknk rel="icon" href="./img/IMG_20210414_100047.ico">
+        <title>Matching days</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/x-template" class="userTemplate">
+            {{#each myWeek}}
+                    <button class="weekDay"> {{this}} </button>
+             {{/each}}
+    </script>
 </head>
 
 <body>
     <div class="container">
         <h1>Matching days</h1>
-        <table class="days">
-            <tr>
-                <td>Monday</td>
-                <td>Tuesday</td>
-                <td>Wednesday</td>
-                <td>Thursday</td>
-                <td>Friday</td>
-                <td>Saturday</td>
-                <td>Sunday</td>
-            </tr>
-        </table>
+        <div class="days" id="days">
+               
+        </div>
         <br>
         <br>
-        First day: <input type="text" class="day1">
+        <div class="dates">
+            First day: <input type="date" class="day1">
+            <br>
+            <br>
+            Second day: <input type="date" class="day2">
+        </div>
         <br>
         <br>
-        Second day: <input type="text" class="day2">
     </div>
+    <script src="./function/functionality.js"></script>
+    <script src="./dom/matching-days.js"></script>
 </body>
 
 </html>
