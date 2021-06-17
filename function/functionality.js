@@ -1,7 +1,7 @@
 function matchingDays() {
     var dayOne = ''
     var dayTwo = ''
-    var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const  week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     function setDays(day1, day2) {
         dayOne = new Date(day1);
         dayTwo = new Date(day2);
@@ -32,7 +32,9 @@ function matchingDays() {
     function notMatch() {
         console.log(week[getDayOne()])
         return week[getDayOne(), getDayTwo()]
-
+    }
+    function weekdayList(){
+        return week
     }
     return {
         setDays,
@@ -40,6 +42,7 @@ function matchingDays() {
         getDayTwo,
         matchTwoDay,
         notMatch,
-        weekDays
+        weekDays,
+        weekdayList
     }
 }
